@@ -23,7 +23,7 @@ class SubmitController extends React.Component {
     const previousStatus = this.props.form.submission.status;
     if (nextStatus !== previousStatus && nextStatus === 'applicationSubmitted') {
       const newRoute = `${nextProps.formConfig.urlPrefix}confirmation`;
-      this.props.router.push(newRoute);
+      this.props.history.push(newRoute);
     }
   }
 
